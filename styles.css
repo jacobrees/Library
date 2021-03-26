@@ -6,6 +6,8 @@
   padding: 0;
 }
 
+/* XL devices (default) */
+
 .logo-back {
   width: 100%;
   height: auto;
@@ -30,15 +32,10 @@
   margin: 0 35px 0 0;
   border: none;
   border-radius: 15px;
-  font-weight: 700;
+  font-weight: 400;
   padding: 10px;
   color: #0080ff;
   background-color: white;
-}
-
-.library-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
 }
 
 .book-container {
@@ -47,4 +44,30 @@
   height: 230px;
   margin: 15px;
   border-radius: 15px;
+}
+
+.library-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+/* Large devices */
+@media only screen and (max-width: 1199.98px) {
+  .library-container {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+/* Medium devices */
+@media only screen and (max-width: 991.98px) {
+  .library-container {
+    grid-template-columns: auto auto;
+  }
+}
+
+/* Small devices */
+@media only screen and (max-width: 767.98px) {
+  .library-container {
+    grid-template-columns: auto;
+  }
 }
