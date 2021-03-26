@@ -6,16 +6,56 @@
   padding: 0;
 }
 
-.title {
-  font-weight: 400;
-  font-size: 37px;
-  color: white;
-  text-align: center;
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
 }
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+}
+
+/* // Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width */
 
 .logo-back {
   width: 100%;
   height: auto;
   padding: 15px 0 15px 0;
   background-color: #0080ff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.empty {
+  width: 89px;
+}
+
+.title {
+  font-weight: 400;
+  font-size: 37px;
+  color: white;
+}
+
+.add-book {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 35px 0 0;
+  border: none;
+  border-radius: 15px;
+  font-weight: 700;
+  padding: 10px;
+  color: #0080ff;
+  background-color: white;
 }
