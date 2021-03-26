@@ -11,10 +11,14 @@
 .logo-back {
   width: 100%;
   height: auto;
-  padding: 15px 0 15px 0;
+  padding: 20px 0 20px 0;
   background-color: #0080ff;
   display: flex;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .empty {
@@ -32,10 +36,10 @@
   margin: 0 35px 0 0;
   border: none;
   border-radius: 15px;
-  font-weight: 400;
-  padding: 10px;
-  color: #0080ff;
+  padding: 15px;
+  color: #666;
   background-color: white;
+  font-weight: 700;
 }
 
 .book-container {
@@ -49,6 +53,7 @@
 .library-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
+  margin-top: 86px;
 }
 
 /* Large devices */
@@ -69,5 +74,9 @@
 @media only screen and (max-width: 767.98px) {
   .library-container {
     grid-template-columns: auto;
+  }
+
+  .empty {
+    width: 9px;
   }
 }
