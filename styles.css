@@ -35,25 +35,26 @@
   font-family: 'Montserrat', sans-serif;
   margin: 0 35px 0 0;
   border: none;
-  border-radius: 15px;
+  border-radius: 7px;
   padding: 15px;
-  color: #666;
+  color: #0080ff;
   background-color: white;
   font-weight: 700;
 }
 
 .book-container {
-  background-color: red;
-  border: #191919 1px solid;
-  height: 230px;
+  border: #666 1px solid;
+  height: 165px;
   margin: 15px;
-  border-radius: 15px;
+  border-radius: 5px;
+  background-color: rgb(231, 231, 231);
 }
 
 .library-container {
   display: grid;
   grid-template-columns: auto auto auto auto;
-  margin-top: 86px;
+  width: 95%;
+  margin: 86px auto 0 auto;
 }
 
 /* Large devices */
@@ -77,6 +78,10 @@
   }
 
   .empty {
-    width: 9px;
+    display: none;
+  }
+
+  .title {
+    margin-left: 35px;
   }
 }
