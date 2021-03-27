@@ -11,6 +11,10 @@ body {
   background-color: rgb(247, 247, 247);
 }
 
+button {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .logo-back {
   width: 100%;
   height: auto;
@@ -34,7 +38,6 @@ body {
 }
 
 .add-book {
-  font-family: 'Montserrat', sans-serif;
   margin: 0 35px 0 0;
   border: none;
   border-radius: 7px;
@@ -65,6 +68,16 @@ body {
 
 .book-details-bold {
   font-weight: 700;
+}
+
+.delete-book{
+  width: 100%;
+  border: none;
+  font-weight: bold;
+  background-color: rgb(165, 0, 0);
+  height: 40px;
+  color: rgb(83, 0, 0);
+  font-size: 20px;
 }
 
 /* Large devices */
