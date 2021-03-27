@@ -47,36 +47,44 @@ body {
 .book-container {
   border: 10px inset #0080ff;
   box-shadow: 0 5px 25px -13px #000;
-  height: 165px;
+  height: auto;
   margin: 15px;
   border-radius: 5px;
 }
 
 .library-container {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: 25% 25% 25% 25%;
   width: 95%;
   margin: 86px auto 0 auto;
+}
+
+.book-details {
+  margin: 15px 0 15px 15px;
+}
+
+.book-details-bold {
+  font-weight: 700;
 }
 
 /* Large devices */
 @media only screen and (max-width: 1199.98px) {
   .library-container {
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 33% 33% 33%;
   }
 }
 
 /* Medium devices */
 @media only screen and (max-width: 991.98px) {
   .library-container {
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
   }
 }
 
 /* Small devices */
 @media only screen and (max-width: 767.98px) {
   .library-container {
-    grid-template-columns: auto;
+    grid-template-columns: 100%;
   }
 
   .empty {
