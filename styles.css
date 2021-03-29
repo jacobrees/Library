@@ -123,6 +123,7 @@ button {
 
 .form-text {
   font-size: 20px;
+  margin-bottom: 5px;
 }
 
 .close-form {
@@ -136,11 +137,16 @@ button {
   font-weight: 700;
 }
 
+.form-checkbox {
+  width: 25px;
+  height: 25px;
+}
+
 .submit-form {
-  margin: 10px;
+  margin: 30px 10px 10px 10px;
   border: none;
   border-radius: 7px;
-  padding: 15px;
+  padding: 20px;
   color: white;
   background-color: #0080ff;
   font-weight: 700;
