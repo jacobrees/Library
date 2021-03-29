@@ -100,10 +100,53 @@ button {
   font-size: 20px;
 }
 
+.form-background {
+  background-color: rgba(0, 0, 0, 0.37);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.form-container {
+  border: 10px inset #0080ff;
+  width: 50%;
+  background-color: white;
+  margin: 70px auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.form-text {
+  font-size: 20px;
+}
+
+.close-form {
+  float: right;
+  margin: 10px;
+  border: none;
+  border-radius: 7px;
+  padding: 15px;
+  color: white;
+  background-color: #0080ff;
+  font-weight: 700;
+}
+
+.hide {
+  display: none;
+}
+
 /* Large devices */
 @media only screen and (max-width: 1199.98px) {
   .library-container {
     grid-template-columns: 33% 33% 33%;
+  }
+  .form-container {
+    width: 70%;
   }
 }
 
@@ -111,6 +154,9 @@ button {
 @media only screen and (max-width: 991.98px) {
   .library-container {
     grid-template-columns: 50% 50%;
+  }
+  .form-container {
+    width: 85%;
   }
 }
 
@@ -126,5 +172,9 @@ button {
 
   .title {
     margin-left: 35px;
+  }
+
+  .form-container {
+    width: 95%;
   }
 }
