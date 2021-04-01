@@ -9,3 +9,13 @@ closeFormBtn.addEventListener('click', () => {
 openFormBtn.addEventListener('click', () => {
   form.classList.toggle('hide');
 });
+
+const myLibrary = [];
+
+function Book() {
+  // the constructor...
+}
+
+function addBookToLibrary() {
+  // do stuff here
+}
