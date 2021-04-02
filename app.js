@@ -32,18 +32,6 @@ const libraryContainer = document.querySelector('.library-container');
 const submitForm = document.querySelector('.submit-form');
 const alertDanger = document.querySelector('.alert-danger');
 
-function Book(title, author, pages, isbn, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.isbn = isbn;
-  this.read = read;
-}
-
-function addBookToLibrary(newBook) {
-  myLibrary.push(newBook);
-}
-
 function displayBooks() {
   let htmlBooks = '';
 
@@ -61,6 +49,20 @@ function displayBooks() {
   libraryContainer.innerHTML = htmlBooks;
 }
 
+displayBooks();
+
+function Book(title, author, pages, isbn, read) {
+  this.title = title;
+  this.author = author;
+  this.pages = pages;
+  this.isbn = isbn;
+  this.read = read;
+}
+
+function addBookToLibrary(newBook) {
+  myLibrary.push(newBook);
+}
+
 submitForm.addEventListener('click', (e) => {
   e.preventDefault();
   if (inputTitle.value === '' || inputAuthor.value === '' || inputPages.value === '' || inputISBN.value === '') {
@@ -75,5 +77,3 @@ submitForm.addEventListener('click', (e) => {
     displayBooks();
   }
 });
-
-displayBooks();
