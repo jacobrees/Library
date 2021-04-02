@@ -156,6 +156,16 @@ button {
   display: none;
 }
 
+.alert-danger {
+  width: 90%;
+  margin: 10px auto;
+  height: auto;
+  background-color: rgb(165, 0, 0);
+  font-weight: bold;
+  text-align: center;
+  color: rgb(83, 0, 0);
+}
+
 /* Large devices */
 @media only screen and (max-width: 1199.98px) {
   .library-container {
