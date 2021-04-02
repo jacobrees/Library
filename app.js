@@ -25,19 +25,23 @@ closeFormBtn.addEventListener('click', () => {
   resetForm();
 });
 
-const myLibrary = [];
+let myLibrary = [];
 
 const libraryContainer = document.querySelector('.library-container');
 
 const submitForm = document.querySelector('.submit-form');
 const alertDanger = document.querySelector('.alert-danger');
 
+function deleteBook(isbn) {
+  myLibrary = myLibrary.filter((book) => book.isbn !== isbn);
+}
+
 function displayBooks() {
   let htmlBooks = '';
 
   myLibrary.forEach((book) => {
     htmlBooks += `<div class="book-container">
-  <button class="delete-book">DELETE</button>
+  <button class="delete-book" data-isbn="${book.isbn}">DELETE</button>
   <p class="book-details">Title:<span class="book-details-bold"> ${book.title}</span></p>
   <p class="book-details">Author:<span class="book-details-bold"> ${book.author}</span></p>
   <p class="book-details">Pages:<span class="book-details-bold"> ${book.pages}</span></p>
@@ -47,6 +51,13 @@ function displayBooks() {
 </div>`;
   });
   libraryContainer.innerHTML = htmlBooks;
+  const deleteBookBtns = document.querySelectorAll('.delete-book');
+  deleteBookBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      deleteBook(e.currentTarget.dataset.isbn);
+      displayBooks();
+    });
+  });
 }
 
 displayBooks();
