@@ -29,10 +29,6 @@ let myLibrary = [];
 
 const libraryContainer = document.querySelector('.library-container');
 
-const submitForm = document.querySelector('.submit-form');
-const alertDanger1 = document.querySelector('.danger-1');
-const alertDanger2 = document.querySelector('.danger-2');
-
 function deleteBook(isbn) {
   myLibrary = myLibrary.filter((book) => book.isbn !== isbn);
 }
@@ -62,6 +58,10 @@ function displayBooks() {
 }
 
 displayBooks();
+
+const submitForm = document.querySelector('.submit-form');
+const alertDanger1 = document.querySelector('.danger-1');
+const alertDanger2 = document.querySelector('.danger-2');
 
 function Book(title, author, pages, isbn, read) {
   this.title = title;
