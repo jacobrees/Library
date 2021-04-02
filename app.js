@@ -30,7 +30,8 @@ let myLibrary = [];
 const libraryContainer = document.querySelector('.library-container');
 
 const submitForm = document.querySelector('.submit-form');
-const alertDanger = document.querySelector('.alert-danger');
+const alertDanger1 = document.querySelector('.danger-1');
+const alertDanger2 = document.querySelector('.danger-2');
 
 function deleteBook(isbn) {
   myLibrary = myLibrary.filter((book) => book.isbn !== isbn);
@@ -78,8 +79,12 @@ submitForm.addEventListener('click', (e) => {
   e.preventDefault();
   if (inputTitle.value === '' || inputAuthor.value === '' || inputPages.value === '' || inputISBN.value === '') {
     submitForm.disabled = true;
-    alertDanger.classList.toggle('hide');
-    setTimeout(() => { alertDanger.classList.toggle('hide'); submitForm.disabled = false; }, 3000);
+    alertDanger1.classList.toggle('hide');
+    setTimeout(() => { alertDanger1.classList.toggle('hide'); submitForm.disabled = false; }, 3000);
+  } else if (myLibrary.find(book => book.isbn === inputISBN.value)) {
+    submitForm.disabled = true;
+    alertDanger2.classList.toggle('hide');
+    setTimeout(() => { alertDanger2.classList.toggle('hide'); submitForm.disabled = false; }, 3000);
   } else {
     const book = new Book(inputTitle.value, inputAuthor.value, inputPages.value, inputISBN.value, inputRead.checked); // eslint-disable-line
     addBookToLibrary(book);
