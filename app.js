@@ -62,6 +62,7 @@ displayBooks();
 const submitForm = document.querySelector('.submit-form');
 const alertDanger1 = document.querySelector('.danger-1');
 const alertDanger2 = document.querySelector('.danger-2');
+const alertDanger3 = document.querySelector('.danger-3');
 
 function Book(title, author, pages, isbn, read) {
   this.title = title;
@@ -85,6 +86,10 @@ submitForm.addEventListener('click', (e) => {
     submitForm.disabled = true;
     alertDanger2.classList.toggle('hide');
     setTimeout(() => { alertDanger2.classList.toggle('hide'); submitForm.disabled = false; }, 3000);
+  } else if (inputISBN.value < 0 || inputPages.value < 0) {
+    submitForm.disabled = true;
+    alertDanger3.classList.toggle('hide');
+    setTimeout(() => { alertDanger3.classList.toggle('hide'); submitForm.disabled = false; }, 3000);
   } else {
     const book = new Book(inputTitle.value, inputAuthor.value, inputPages.value, inputISBN.value, inputRead.checked); // eslint-disable-line
     addBookToLibrary(book);
