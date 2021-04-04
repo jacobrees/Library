@@ -45,6 +45,7 @@ button {
   color: #0080ff;
   background-color: white;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .book-container {
@@ -78,6 +79,7 @@ button {
   height: 40px;
   color: rgb(83, 0, 0);
   font-size: 20px;
+  cursor: pointer;
 }
 
 .read-book {
@@ -88,6 +90,7 @@ button {
   height: 40px;
   color: rgb(0, 83, 0);
   font-size: 20px;
+  cursor: pointer;
 }
 
 .not-read-book {
@@ -98,6 +101,7 @@ button {
   height: 40px;
   color: rgb(83, 83, 83);
   font-size: 20px;
+  cursor: pointer;
 }
 
 .form-background {
@@ -136,11 +140,13 @@ button {
   color: white;
   background-color: #0080ff;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .form-checkbox {
   width: 25px;
   height: 25px;
+  cursor: pointer;
 }
 
 .submit-form {
@@ -151,6 +157,7 @@ button {
   color: white;
   background-color: #0080ff;
   font-weight: 700;
+  cursor: pointer;
 }
 
 .hide {
