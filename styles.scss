@@ -160,6 +160,10 @@ button {
   cursor: pointer;
 }
 
+.danger-hide {
+  display: none;
+}
+
 .hide {
   opacity: 0;
   pointer-events: none;
@@ -213,6 +217,5 @@ button {
 
   .form-container {
     width: 95%;
-    margin: 20px auto;
   }
 }

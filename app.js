@@ -80,16 +80,16 @@ submitForm.addEventListener('click', (e) => {
   e.preventDefault();
   if (inputTitle.value === '' || inputAuthor.value === '' || inputPages.value === '' || inputISBN.value === '') {
     submitForm.disabled = true;
-    alertDanger1.classList.toggle('hide');
-    setTimeout(() => { alertDanger1.classList.toggle('hide'); submitForm.disabled = false; }, 3000);
+    alertDanger1.classList.toggle('danger-hide');
+    setTimeout(() => { alertDanger1.classList.toggle('danger-hide'); submitForm.disabled = false; }, 3000);
   } else if (myLibrary.find(book => book.isbn === inputISBN.value)) {
     submitForm.disabled = true;
-    alertDanger2.classList.toggle('hide');
-    setTimeout(() => { alertDanger2.classList.toggle('hide'); submitForm.disabled = false; }, 3000);
+    alertDanger2.classList.toggle('danger-hide');
+    setTimeout(() => { alertDanger2.classList.toggle('danger-hide'); submitForm.disabled = false; }, 3000);
   } else if (inputISBN.value < 0 || inputPages.value < 0) {
     submitForm.disabled = true;
-    alertDanger3.classList.toggle('hide');
-    setTimeout(() => { alertDanger3.classList.toggle('hide'); submitForm.disabled = false; }, 3000);
+    alertDanger3.classList.toggle('danger-hide');
+    setTimeout(() => { alertDanger3.classList.toggle('danger-hide'); submitForm.disabled = false; }, 3000);
   } else {
     const book = new Book(inputTitle.value, inputAuthor.value, inputPages.value, inputISBN.value, inputRead.checked); // eslint-disable-line
     addBookToLibrary(book);
