@@ -43,9 +43,13 @@ function displayBooks() {
   <p class="book-details">Author:<span class="book-details-bold"> ${book.author}</span></p>
   <p class="book-details">Pages:<span class="book-details-bold"> ${book.pages}</span></p>
   <p class="book-details">ISBN:<span class="book-details-bold"> ${book.isbn}</span></p>
-  <p class="book-details">Read:<span class="book-details-bold"> ${book.read}</span></p>
-  <button class="read-book">READ</button>
-</div>`;
+  <p class="book-details">Read:<span class="book-details-bold"> ${book.read}</span></p>`;
+    if (book.read) {
+      htmlBooks += '<button class="read-book">READ</button>';
+    } else {
+      htmlBooks += '<button class="not-read-book">NOT READ</button>';
+    }
+    htmlBooks += '</div>';
   });
   libraryContainer.innerHTML = htmlBooks;
   const deleteBookBtns = document.querySelectorAll('.delete-book');
