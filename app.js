@@ -34,7 +34,8 @@ function deleteBook(isbn) {
 }
 
 function changeReadStatus(isbn) {
-  myLibrary.find(book => book.isbn === isbn).read = !myLibrary.find(book => book.isbn === isbn).read;
+  const reverse = !myLibrary.find(book => book.isbn === isbn).read;
+  myLibrary.find(book => book.isbn === isbn).read = reverse;
 }
 
 function displayBooks() {
