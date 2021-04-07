@@ -178,6 +178,10 @@ button {
   pointer-events: none;
 }
 
+.hide-nav {
+  overflow: hidden;
+}
+
 .alert-danger {
   width: 90%;
   margin: 10px auto;

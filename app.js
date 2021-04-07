@@ -1,9 +1,11 @@
 const closeFormBtn = document.querySelector('.close-form');
 const form = document.querySelector('.form-background');
 const openFormBtn = document.querySelector('.add-book');
+const HTML = document.querySelector('html');
 
 openFormBtn.addEventListener('click', () => {
   form.classList.toggle('hide');
+  HTML.classList.toggle('hide-nav');
 });
 
 const inputTitle = document.querySelector('#title');
@@ -22,6 +24,7 @@ function resetForm() {
 
 closeFormBtn.addEventListener('click', () => {
   form.classList.toggle('hide');
+  HTML.classList.toggle('hide-nav');
   resetForm();
 });
 
@@ -112,5 +115,6 @@ submitForm.addEventListener('click', (e) => {
     form.classList.toggle('hide');
     resetForm();
     displayBooks();
+    HTML.classList.toggle('hide-nav');
   }
 });
