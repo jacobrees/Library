@@ -54,6 +54,7 @@ button {
   height: auto;
   margin: 15px;
   border-radius: 5px;
+  position: relative;
 }
 
 .library-container {
@@ -65,6 +66,10 @@ button {
 
 .book-details {
   margin: 15px 0 15px 15px;
+}
+
+.book-details-last {
+  margin: 15px 0 60px 15px;
 }
 
 .book-details-bold {
@@ -83,25 +88,25 @@ button {
 }
 
 .read-book {
-  width: 100%;
-  border: none;
-  font-weight: bold;
   background-color: rgb(0, 165, 0);
-  height: 40px;
   color: rgb(0, 83, 0);
-  font-size: 20px;
-  cursor: pointer;
 }
 
 .not-read-book {
+  background-color: rgb(163, 163, 163);
+  color: rgb(83, 83, 83);
+}
+
+.read-book-btn {
   width: 100%;
   border: none;
   font-weight: bold;
-  background-color: rgb(163, 163, 163);
   height: 40px;
-  color: rgb(83, 83, 83);
   font-size: 20px;
   cursor: pointer;
+  overflow-x: hidden;
+  position: absolute;
+  bottom: 0;
 }
 
 .form-background {
@@ -112,7 +117,6 @@ button {
   height: 100%;
   transition: all 0.5s ease-in-out;
   overflow: scroll;
-  overflow-x: hidden;
 }
 
 .form-container {
