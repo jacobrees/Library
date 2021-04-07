@@ -33,6 +33,10 @@ function deleteBook(isbn) {
   myLibrary = myLibrary.filter((book) => book.isbn !== isbn);
 }
 
+function changeReadStatus(isbn) {
+  myLibrary.find(book => book.isbn === isbn).read = !myLibrary.find(book => book.isbn === isbn).read;
+}
+
 function displayBooks() {
   let htmlBooks = '';
 
@@ -45,9 +49,9 @@ function displayBooks() {
   <p class="book-details">ISBN:<span class="book-details-bold"> ${book.isbn}</span></p>
   <p class="book-details">Read:<span class="book-details-bold"> ${book.read}</span></p>`;
     if (book.read) {
-      htmlBooks += '<button class="read-book">READ</button>';
+      htmlBooks += '<button class="read-book read-book-btn">READ</button>';
     } else {
-      htmlBooks += '<button class="not-read-book">NOT READ</button>';
+      htmlBooks += '<button class="not-read-book read-book-btn">NOT READ</button>';
     }
     htmlBooks += '</div>';
   });
@@ -56,6 +60,13 @@ function displayBooks() {
   deleteBookBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
       deleteBook(e.currentTarget.parentElement.dataset.isbn);
+      displayBooks();
+    });
+  });
+  const readBookBtns = document.querySelectorAll('.read-book-btn');
+  readBookBtns.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      changeReadStatus(e.currentTarget.parentElement.dataset.isbn);
       displayBooks();
     });
   });
