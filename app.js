@@ -113,8 +113,8 @@ submitForm.addEventListener('click', (e) => {
     const book = new Book(inputTitle.value, inputAuthor.value, inputPages.value, inputISBN.value, inputRead.checked); // eslint-disable-line
     addBookToLibrary(book);
     form.classList.toggle('hide');
+    HTML.classList.toggle('hide-nav');
     resetForm();
     displayBooks();
-    HTML.classList.toggle('hide-nav');
   }
 });
