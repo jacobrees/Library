@@ -29,6 +29,7 @@ button {
   top: 0;
   -webkit-box-shadow: 0 5px 25px -15px #000;
           box-shadow: 0 5px 25px -15px #000;
+  z-index: 1;
 }
 
 .empty {
@@ -125,6 +126,8 @@ button {
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
   overflow: scroll;
+  overflow-x: hidden;
+  z-index: 2;
 }
 
 .form-container {

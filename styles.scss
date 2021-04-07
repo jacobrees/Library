@@ -25,6 +25,7 @@ button {
   position: fixed;
   top: 0;
   box-shadow: 0 5px 25px -15px #000;
+  z-index: 1;
 }
 
 .empty {
@@ -117,6 +118,8 @@ button {
   height: 100%;
   transition: all 0.5s ease-in-out;
   overflow: scroll;
+  overflow-x: hidden;
+  z-index: 2;
 }
 
 .form-container {
