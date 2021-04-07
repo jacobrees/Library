@@ -119,6 +119,8 @@ button {
   height: 100%;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .form-container {
