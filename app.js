@@ -37,8 +37,8 @@ function displayBooks() {
   let htmlBooks = '';
 
   myLibrary.forEach((book) => {
-    htmlBooks += `<div class="book-container">
-  <button class="delete-book" data-isbn="${book.isbn}">DELETE</button>
+    htmlBooks += `<div class="book-container" data-isbn="${book.isbn}">
+  <button class="delete-book">DELETE</button>
   <p class="book-details">Title:<span class="book-details-bold"> ${book.title}</span></p>
   <p class="book-details">Author:<span class="book-details-bold"> ${book.author}</span></p>
   <p class="book-details">Pages:<span class="book-details-bold"> ${book.pages}</span></p>
@@ -55,7 +55,7 @@ function displayBooks() {
   const deleteBookBtns = document.querySelectorAll('.delete-book');
   deleteBookBtns.forEach((btn) => {
     btn.addEventListener('click', (e) => {
-      deleteBook(e.currentTarget.dataset.isbn);
+      deleteBook(e.currentTarget.parentElement.dataset.isbn);
       displayBooks();
     });
   });
