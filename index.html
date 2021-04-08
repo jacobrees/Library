@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Library</title>
+</head>
+<body>
+    <div class="logo-back">
+        <div class="empty"></div>
+        <h2 class="title">Library</h2>
+        <button class="add-book">Add Book</button>
+    </div>
+
+    <div class="library-container">
+        <div class="book-container">
+            <button class="delete-book">DELETE</button>
+            <p class="book-details">Title:<span class="book-details-bold"> Harry Potter & The Order Of The Pheonix</span></p>
+            <p class="book-details">Author:<span class="book-details-bold"> JK Rowling</span></p>
+            <p class="book-details">Pages:<span class="book-details-bold"> 637</span></p>
+            <p class="book-details book-details-last">Read:<span class="book-details-bold"> True</span></p>
+            <button class="read-book read-book-btn">READ</button>
+        </div>
+        <div class="book-container">
+            <button class="delete-book">DELETE</button>
+            <p class="book-details">Title:<span class="book-details-bold"> Harry Potter & The Philosophers Stone</span></p>
+            <p class="book-details">Author:<span class="book-details-bold"> JK Rowling</span></p>
+            <p class="book-details">Pages:<span class="book-details-bold"> 637</span></p>
+            <p class="book-details book-details-last">Read:<span class="book-details-bold"> False</span></p>
+            <button class="not-read-book read-book-btn">NOT READ</button>
+        </div>
+        <div class="book-container">
+            <button class="delete-book">DELETE</button>
+            <p class="book-details">Title:<span class="book-details-bold"> small</span></p>
+            <p class="book-details">Author:<span class="book-details-bold"> JK Rowling</span></p>
+            <p class="book-details">Pages:<span class="book-details-bold"> 637</span></p>
+            <p class="book-details book-details-last">Read:<span class="book-details-bold"> False</span></p>
+            <button class="not-read-book read-book-btn">NOT READ</button>
+        </div>
+    </div>
+    <div class="form-background hide">
+        <div class="form-container">
+            <p class ="alert-danger danger-1 danger-hide">Please Ensure All Fields Are Filled...</p>
+            <p class ="alert-danger danger-2 danger-hide">ISBN Cannot Already Exist, Check For Duplicates...</p>
+            <p class ="alert-danger danger-3 danger-hide">ISBN / Pages Fields Can Not Be A Negative Number</p>
+            <button class="close-form">Close</button>
+            <form class="form">
+                <label class="form-text" for="title">Title: </label>
+                <input class="form-text" id="title" type="text">
+                <label class="form-text" for="author">Author: </label>
+                <input class="form-text" id="author" type="text">
+                <label class="form-text" for="pages">Pages: </label>
+                <input class="form-text" id="pages" type="number">
+                <label class="form-text" for="isbn">ISBN: </label>
+                <input class="form-text" id="isbn" type="number">
+                <label class="form-text" for="read">Read: </label>
+                <input class="form-checkbox" id="read" type="checkbox">
+                <button class="submit-form" type="submit">Add Book</button>
+            </form>
+        </div>
+
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
