@@ -37,8 +37,8 @@ function deleteBook(isbn) {
 }
 
 function changeReadStatus(isbn) {
-  const reverse = !myLibrary.find(book => book.isbn === isbn).read;
-  myLibrary.find(book => book.isbn === isbn).read = reverse;
+  const reverse = !myLibrary.find((book) => book.isbn === isbn).read;
+  myLibrary.find((book) => book.isbn === isbn).read = reverse;
 }
 
 function displayBooks() {
@@ -97,7 +97,7 @@ submitForm.addEventListener('click', (e) => {
     submitForm.disabled = true;
     alertDanger1.classList.toggle('danger-hide');
     setTimeout(() => { alertDanger1.classList.toggle('danger-hide'); submitForm.disabled = false; }, 3000);
-  } else if (myLibrary.find(book => book.isbn === inputISBN.value)) {
+  } else if (myLibrary.find((book) => book.isbn === inputISBN.value)) {
     submitForm.disabled = true;
     alertDanger2.classList.toggle('danger-hide');
     setTimeout(() => { alertDanger2.classList.toggle('danger-hide'); submitForm.disabled = false; }, 3000);
