@@ -53,9 +53,9 @@ function displayBooks() {
   <p class="book-details">ISBN:<span class="book-details-bold"> ${book.isbn}</span></p>
   <p class="book-details book-details-last">Read:<span class="book-details-bold"> ${book.read}</span></p>`;
     if (book.read) {
-      htmlBooks += '<button class="read-book read-book-btn">READ</button>';
+      htmlBooks += '<button class="read-book read-book-btn" type="button">READ</button>';
     } else {
-      htmlBooks += '<button class="not-read-book read-book-btn">NOT READ</button>';
+      htmlBooks += '<button class="not-read-book read-book-btn" type="button">NOT READ</button>';
     }
     htmlBooks += '</div>';
   });
