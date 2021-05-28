@@ -83,13 +83,9 @@ const alertDanger1 = document.querySelector('.danger-1');
 const alertDanger2 = document.querySelector('.danger-2');
 const alertDanger3 = document.querySelector('.danger-3');
 
-function Book(title, author, pages, isbn, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.isbn = isbn;
-  this.read = read;
-}
+const Book = (title, author, pages, isbn, read) => ({
+  title, author, pages, isbn, read,
+});
 
 function addBookToLibrary(newBook) {
   myLibrary.push(newBook);
@@ -110,7 +106,7 @@ submitForm.addEventListener('click', (e) => {
     alertDanger3.classList.toggle('danger-hide');
     setTimeout(() => { alertDanger3.classList.toggle('danger-hide'); submitForm.disabled = false; }, 3000);
   } else {
-    const book = new Book(inputTitle.value, inputAuthor.value, inputPages.value, inputISBN.value, inputRead.checked); // eslint-disable-line
+    const book = Book(inputTitle.value, inputAuthor.value, inputPages.value, inputISBN.value, inputRead.checked); // eslint-disable-line
     addBookToLibrary(book);
     form.classList.toggle('hide');
     HTML.classList.toggle('hide-nav');
