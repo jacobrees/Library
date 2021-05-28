@@ -5,7 +5,7 @@
 ![](screenshot/screenshot.png)
 
 # Live Website
-https://rawcdn.githack.com/jacobrees/Library/5b1e73582972cd179bd4e8d0fb5f53c390799f6c/index.html
+https://rawcdn.githack.com/jacobrees/Library/b556dad25728eacac05603142b0b702775d7a216/index.html
 
 # Getting Started
 
